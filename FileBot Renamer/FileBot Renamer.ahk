@@ -20,6 +20,8 @@ scriptPath := "move_files.bat"
 		return
 	}
 
+
+	Clipboard:=
 	previousClipboard := ""
 
 	;Clear file
