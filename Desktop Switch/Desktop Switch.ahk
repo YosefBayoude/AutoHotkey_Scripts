@@ -22,7 +22,7 @@ global ID_LENGTH := StrLen(getCurrentDesktopId()) ;Usually 32, but we never know
 
 F13:: ; <= Desired shortcut goes here
 
-	If (A_TimeSincePriorHotkey < 250) ;Prevents rapid double click, specifically set for iCue when keyboard changes profiles
+	If (A_TimeSincePriorHotkey < 500) ;Prevents rapid double click, specifically set for iCue when keyboard changes profiles
 			Return
 
 	desktopCount := getArrayFromVirtualDesktopIds().MaxIndex()
