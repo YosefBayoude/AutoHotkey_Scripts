@@ -23,7 +23,7 @@ F14::
 setAlwaysOnTop() {
 	WinActivate, ahk_exe vivaldi.exe
 	WinSet, Alwaysontop, ON, ahk_exe vivaldi.exe
-	WinSet, Transparent, 225, ahk_exe vivaldi.exe
+	WinSet, Transparent, 240, ahk_exe vivaldi.exe
 }
 
 removeAlwaysOnTop() {
