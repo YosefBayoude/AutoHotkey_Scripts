@@ -10,7 +10,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         Send {BackSpace}
         return
 
-    ::->::→
     +²::
         SendRaw, ``
         SendRaw, ``
@@ -18,4 +17,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
         SendRaw, c++
         Send {Enter}
         return
+
+    ::->::→ ;clean arrow
 }
