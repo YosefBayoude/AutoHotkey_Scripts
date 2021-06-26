@@ -20,7 +20,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 global ID_LENGTH := StrLen(getCurrentDesktopId()) ;Usually 32, but we never know with Windows Updates
 
-F13:: ; <= Desired shortcut goes here
+F13:: ; <= Desired shortcut goes here*
+
+	if WinActive("ahk_exe VirtualBoxVM.exe") { ;When running a VM with VirtualBox, this will escape the character execute the script correctly
+		SendInput, {RControl up} ;Shortcut to escape VM control
+	}
+
+	if WinActive("ahk_exe vmplayer.exe") { ;When running a VM with VirtualBox, this will escape the character execute the script correctly
+		MsgBox, test
+		;SendInput, {Ctrl}{Alt} ;Shortcut to escape VM control
+	}
 
 	If (A_TimeSincePriorHotkey < 500) ;Prevents rapid double click, specifically set for iCue when keyboard changes profiles
 			Return
