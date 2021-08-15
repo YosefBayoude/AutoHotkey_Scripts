@@ -5,6 +5,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 (#IfWinActive ahk_exe studio64.exe) || (#IfWinActive ahk_exe idea64.exe)
 {
+	Alt up:: ;disable alt key being released by itself
+		return
+	Alt & down:: ;however, when it is pressed it should still be considered
+		Send, {Alt}
+		return
     !i::
         Send, {Up}
 		return
