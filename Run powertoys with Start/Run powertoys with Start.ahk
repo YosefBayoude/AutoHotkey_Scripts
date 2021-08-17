@@ -5,3 +5,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 LWin Up::Send ^!{Space} ;Powertoys run needs to be set to Ctrl+Alt+Space
 ;To use the real start menu, use right windows button
+
+LWin & down::Send {LWin} ;Allows the use of shortcuts using the windows key
