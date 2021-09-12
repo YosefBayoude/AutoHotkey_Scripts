@@ -3,7 +3,11 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-LWin Up::Send ^!{Space} ;Powertoys run needs to be set to Ctrl+Alt+Space
-;To use the real start menu, use right windows button
 
-LWin & down::Send {LWin} ;Allows the use of other shortcuts using the windows key
+#IfWinActive ahk_exe firefox.exe
+	^E::
+		Send, ^l
+		Send, {Backspace}
+		Send, `%
+		Send, {Space}
+		return

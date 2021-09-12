@@ -10,6 +10,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 	Alt & down:: ;however, when it is pressed it should still be considered
 		Send, {Alt}
 		return
+    !Space::
+		return
     !i::
         Send, {Up}
 		return
@@ -45,5 +47,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 		return
 	!d::
 		Send, {PgDn}
+		return
+	!,::
+		Send, {BackSpace}
+		return
+	!n::
+		Send, ^{BackSpace}
+		return
+	!;::
+		Send, {Delete}
 		return
 }
