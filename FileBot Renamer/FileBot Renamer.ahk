@@ -43,10 +43,10 @@ scriptPath := "move_files.bat"
 			fileappend, % getLine() . "`n", %scriptPath%
 			previousClipboard := clipboard
 		} else {
-			Send, !{F4}
+			Send, {Esc}
 			break
 		}
-		Send, !{F4}
+		Send, {Esc}
 		Sleep, 200
 		Send, {Down}
 	}
@@ -54,7 +54,7 @@ scriptPath := "move_files.bat"
 	Sleep, 200
 	checkMoveCommandExisist()
 	Run, %scriptPath% && del %scriptPath%
-    
+
 return
 
 getOldName() {
