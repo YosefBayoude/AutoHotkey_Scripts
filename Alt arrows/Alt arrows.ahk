@@ -81,6 +81,35 @@ return
 	Send, #{Left}
 return
 
+!BackSpace::
+	Send, ^z
+return
+
+!ù::
+	Send, (
+return
+
+!SC01A::
+	Send, {{}
+return
+
+!!::
+	Send, [
+return
+
+<^>!<^<!ù::
+	Send, )
+return
+
+<^>!<^<!SC01A::
+	Send, {}}
+return
+
+<^>!<^<!!::
+	Send, ]
+return
+
+
 getKeyboardLayout() {
 	return DllCall("GetKeyboardLayout","UInt", DllCall("GetWindowThreadProcessId","UInt",WinGet, WinID,, A,"UInt",0),"UInt")
 }
